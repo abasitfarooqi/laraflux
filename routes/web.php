@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Spatie\Browsershot\Browsershot;
+//livewire
+use App\Livewire\Pages\WelcomePage;
 
 // controllers
 use App\Http\Controllers\CaptureController;
@@ -10,6 +12,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/livewire', WelcomePage::class);
 
 
 Route::get('/screenshot', function () {
